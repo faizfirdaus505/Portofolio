@@ -1,0 +1,990 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
+
+
+
+.light-leak{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: -2;
+    pointer-events: none;
+}
+
+.light-leak video{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: .1;
+    mix-blend-mode: soft-light;
+}
+
+
+@font-face {
+    font-family: 'coolveticaregular';
+    src: url('coolvetica_rg-webfont.woff2') format('woff2'),
+         url('coolvetica_rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'century_schoolbookbold';
+    src: url('schlbkb-webfont.woff2') format('woff2'),
+         url('schlbkb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bankgothic_md_btmedium';
+    src: url('bank_gothic_medium_bt-webfont.woff2') format('woff2'),
+         url('bank_gothic_medium_bt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'isocpeurregular';
+    src: url('isocpeur-webfont.woff2') format('woff2'),
+         url('isocpeur-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font-family: "coolveticaregular", Arial;
+    letter-spacing: 2px;
+    color: white;
+    overflow-x: hidden;
+    background-color: black;
+    font-weight: 80;
+    letter-spacing: 3px;
+}
+
+
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00000052;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px 60px;
+
+    z-index: 1000;
+    box-sizing: border-box;
+    
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 40%;
+    
+}
+
+.logo h4 {
+    font-style: italic;
+}
+
+.miring-sherif {
+    font-family: "century_schoolbookbold";
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li  :hover {
+    color: #ffbb00;
+}
+
+/* menu tonggle */
+
+.menu-tonggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    /* background-color: black; */
+    position: relative;
+}
+
+.menu-tonggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -5px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-tonggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #ffbb00;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.batash {
+    height: 80px;
+    display: block;
+}
+
+/* judul */
+
+.judul{
+    margin-top: 40px;
+    padding-left: 4%;
+}
+
+.judul p {
+    font-family: "bankgothic_md_btmedium";
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.kuning {
+    color: #ffbb00;
+}
+
+.century {
+    font-family: "century_schoolbookbold";
+}
+
+.gothic {
+    font-family: "bankgothic_md_btmedium";
+}
+
+.judul h1 {
+    font-style: italic;
+    letter-spacing: 3px;
+    font-weight: 90;
+    margin-top: -8px;
+    margin-bottom: 5px;
+}
+
+.ha4 {
+    display: flex;
+}
+
+.judul h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 90%;
+    letter-spacing: 1px;
+    margin-right: 2px;
+}
+
+/* hero */
+
+.hero img {
+    position: absolute;
+    width: 100%;
+    top: -20px;
+    z-index: -1000;
+}
+
+/* hazard */
+
+.hazard{
+    z-index: -3;
+    width:100%;
+    height:300px;
+    position: absolute;
+    top: 670px;
+    background:
+    /* Gradasi hitam dari atas */
+    linear-gradient(
+        to bottom,
+        #000 0%,
+        rgba(0,0,0,.75) 18%,
+        rgba(0,0,0,.25) 35%,
+        rgba(0,0,0,0) 50%
+    ),
+
+    /* Gradasi hitam dari bawah */
+    linear-gradient(
+        to top,
+        #000 0%,
+        rgba(0,0,0,.75) 18%,
+        rgba(0,0,0,.25) 35%,
+        rgba(0,0,0,0) 50%
+    ),
+
+    /* Hazard Stripe */
+    repeating-linear-gradient(
+        -45deg,
+        #0b0b0b 0px,
+        #0b0b0b 28px,
+        #ffbb00 28px,
+        #ffbb00 56px
+    );
+}
+
+/* about */
+
+#about {
+    scroll-margin-top: -680px;
+}
+
+.about {
+    display: grid;
+    grid-template-areas: "about about"
+    "isi-about muka"
+    "garis garis"
+    "hitam visi";
+    grid-template-columns: 2fr 1fr;
+    padding-top: 750px;
+    height: 90vh;
+}
+
+.about p {
+    grid-area: about;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.about h3 {
+    grid-area: isi-about;
+    margin-left: 10%;
+    display: flex;
+    width: 70%;
+    font-size: 180%;
+    font-weight: 50;
+}
+
+.about .muka{
+    width: 220px;
+    height: 320px;
+
+    position: relative;
+
+    margin-left: 25%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    background: #161616;
+}
+
+/* Foto */
+
+.about .muka img{
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+
+    object-fit: cover;
+
+    
+    position: relative;
+    z-index: 2;
+}
+
+
+@property --deg{
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+/* Border */
+
+.about .muka::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-3px;
+
+
+    background:
+    conic-gradient(
+        from var(--deg),
+
+        #570000 0deg,
+        #570000 250deg,
+
+        #fff000 290deg,
+
+        #ffe600 310deg,
+
+        #fff000 340deg,
+
+        #ffe600 360deg
+    );
+
+    animation: rotate 3s linear infinite;
+
+    z-index:0;
+}
+
+/* Glow */
+
+.about .muka::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-1000px;
+
+
+    background:
+    conic-gradient(
+        from var(--deg),
+
+        #570000 0deg,
+        #570000 250deg,
+
+        #fff000 290deg,
+
+        #ffe600 310deg,
+
+        #fff000 340deg,
+
+        #ffe600 360deg
+    );
+
+    animation: rotate 3s linear infinite;
+
+    filter: blur(90px);
+
+    opacity:.8;
+
+    z-index:-1;
+}
+
+/* ===========================================
+   MEMBUAT TENGAHNYA TERTUTUP
+=========================================== */
+
+.about .muka::before{
+
+    padding:3px;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask-composite:exclude;
+
+    box-sizing:border-box;
+}
+
+/* ===========================================
+   ROTATE
+=========================================== */
+
+@keyframes rotate{
+
+    from{
+        --deg:0deg;
+    }
+
+    to{
+        --deg:360deg;
+    }
+
+}
+
+.about .line {
+    grid-area: garis;
+    width: 95%;
+    height: 4px;
+    background-color: #ffbb00;
+    display: flex;
+    margin: 50px auto;
+}
+
+.about h4 {
+    grid-area: visi;
+    font-family: "isocpeurregular";
+    margin-right: 10%;
+    text-align: right;
+    padding-bottom: 200px;
+    font-weight: 20;
+    font-size: 120%;
+}
+
+
+/* project */
+
+#project {
+    scroll-margin-top: 70px;
+}
+
+.projects {
+    display: grid;
+    grid-template-areas: "1"
+    "2"
+    "3";
+    margin-top: 200px;
+}
+
+.projects h2 {
+    color: #ffbb00;
+    font-size: 400%;
+    grid-area: 1;
+    display: flex;
+    margin: auto;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.projects p {
+    grid-area: 2;
+    display: flex;
+    margin: auto;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 80%;
+}
+
+.wrapper {
+    grid-area: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 300px;
+}
+
+.image{
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transition: .5s ease-in-out;
+}
+
+.wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+
+.previous4{
+    transform: translate(calc(-50% - 830px), calc(-50% - 300px)) scale(.35);
+    z-index: 10;
+}
+
+.previous3{
+    transform: translate(calc(-50% - 680px), calc(-50% - 200px)) scale(.5);
+    z-index: 20;
+}
+
+.previous2{
+    transform: translate(calc(-50% - 500px), calc(-50% - 100px)) scale(.65);
+    z-index: 30;
+}
+
+.previous{
+    transform: translate(calc(-50% - 280px), calc(-50% - 50px)) scale(.8);
+    z-index: 40;
+}
+
+.active{
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 50;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.next{
+    transform: translate(calc(-50% + 280px), calc(-50% - 50px)) scale(.8);
+    z-index: 40;
+}
+
+.next2{
+    transform: translate(calc(-50% + 500px), calc(-50% - 100px)) scale(.65);
+    z-index: 30;
+}
+
+.next3{
+    transform: translate(calc(-50% + 680px), calc(-50% - 200px)) scale(.5);
+    z-index: 20;
+}
+
+.next4{
+    transform: translate(calc(-50% + 830px), calc(-50% - 300px)) scale(.35);
+    z-index: 10;
+}
+
+/*skils*/
+
+#skills {
+    scroll-margin-top: -120px;
+}
+
+.skills{
+    width: 100%;
+    padding: 100px 0;
+}
+
+.skills h2 {
+    padding-top: 200px;
+    text-align: center;
+    color: #ffbb00;
+    font-size: 250%;
+}
+
+.skills p {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 80%;
+}
+
+.contain {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    flex-wrap: wrap; /* agar responsif */
+    margin-top: 100px;
+    text-decoration: none;
+}
+
+.kotak {
+    width: 380px;
+    height: 600px;
+
+    background-color: rgba(255, 255, 255, 0.088);
+    backdrop-filter: blur(10px);
+
+    border: 5px solid #ffbb00;
+    border-radius: 20px;
+
+    padding: 20px;
+    color: white;
+
+    transition: 0.3s;
+}
+
+.kotak ul li{
+    list-style: none;
+    font-family: "isocpeurregular";
+    text-align: center;
+    font-size: 150%;
+    margin-top: 20px;
+}
+
+.kotak ul {
+    margin-top: 60px;
+}
+
+
+.skills h4 {
+    text-align: center;
+    justify-content: center;
+    margin-top: 90px;
+    font-family: "bankgothic_md_btmedium";
+    font-weight: 30;
+}
+
+.kotak h3 {
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 250%;
+    font-weight: 40;
+    margin-bottom: -20px;
+}
+
+.kotak p {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+/* contact */
+.contact{
+    min-height:100vh;
+    padding:80px 70px 50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    position: relative;
+    background:
+    linear-gradient(
+        to top,
+        #ffbb00,
+        #000 70%
+    );
+    z-index: -40;
+}
+
+.quote{
+    width:350px;
+    margin-top: 200px;
+    z-index: 2;
+}
+
+.quote h2{
+    font-size:2rem;
+    line-height:1.2;
+    font-weight:600;
+    font-weight: lighter;
+}
+
+.rapi{
+    align-self:flex-end;
+    display:flex;
+    gap:90px;
+    z-index: 2;
+
+}
+
+.rapi ul :first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+    letter-spacing: 1px;
+}
+
+.rapi ul{
+    list-style:none;
+    padding:0;
+}
+
+
+.rapi li{
+    margin-bottom:8px;
+    font-size:1rem;
+}
+
+.copyright{
+    text-align:center;
+    font-size:.9rem;
+    color:#ffffff;
+    z-index: 2;
+
+}
+
+.rapi ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* hamburger animasi */
+
+.menu-tonggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-tonggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-tonggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px); 
+}
+
+.menu-tonggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-tonggle input:checked ~ span:nth-child(3) {
+    scale: 0;
+}
+
+/* responsif tab*/
+
+@media screen and (max-width: 768px){
+    nav ul {
+        width: 60%;
+    }
+    .hero img {
+        width: 100%;
+        height: 95%;
+        object-fit: cover;
+        top: -20px;
+        transition: all 0.7s;
+    }
+    .about .muka{
+    width: 220px;
+    height: 320px;
+
+    position: relative;
+
+    margin-left: -4%;
+    }
+
+    .projects {
+        padding-top: 200px;
+    }
+
+    .projects h2 {
+        scale: .8;
+    }
+
+    .projects p{
+        scale: .8;
+    }
+
+    .wrapper {
+        margin-top: -20px;
+        scale: .7;
+    }
+
+    #project {
+        scroll-margin-top: -120px;
+        }
+
+    .skills h4 {
+        padding-bottom: 100px;
+    }
+
+    .contact .quote {
+        margin-left: -10px;
+        scale: .9;
+    }
+
+    .rapi li{
+        font-size: 1rem;
+        margin-bottom: 4px;
+        font-size: 90%;
+        margin-right: 20px;
+    }
+
+    .copyright {
+        font-size: 70%;
+        text-align: center;
+        justify-content: center;
+    }
+
+}
+/* responsif hp*/
+
+@media screen and (max-width:576px) {
+    .menu-tonggle {
+        display: flex;
+        
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column  ;
+        background-color: rgb(37, 37, 37);
+        width: 60%;
+        height: 70vh;
+        z-index: 2;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.7s;
+        margin-top: 82px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+        opacity: 0.9;
+        transition: all 0.7s;
+        
+    }
+
+    .judul {
+        margin-top: 420px;
+        scale: .85;
+        padding-left: -4%;
+        transition: all 0.7s;
+    }
+
+    .ha4{
+        display: block;
+        transition: all 0.7s;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 95%;
+        object-fit: cover;
+        top: -20px;
+        transition: all 0.7s;
+    }
+    
+    .about {
+    grid-template-areas:  "about about"
+    "isi-about isi-about"
+    "garis garis"
+    "muka visi";
+    padding-top: 340px;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    gap: -290px;
+    }
+
+    .about .muka {
+        scale: .7;
+        margin-left: -20px;
+        margin-top: -50px;
+    }
+    
+    .about h3 {
+        width: 86%;
+        font-size: 130%;
+    }
+    
+    
+    .about h4 {
+        font-size: 90%;
+    
+    }
+    
+    .about .line {
+        margin: 30px auto;
+    }
+
+    #about {
+    scroll-margin-top: -280px;
+    }
+
+    #project {
+    scroll-margin-top: 120px;
+    }
+    
+    .projects {
+        padding-top: 10px;
+        padding-bottom: 50px;
+    }
+
+    .wrapper {
+        margin-top: -70px;
+        scale: .45;
+        margin-bottom: 200px;
+    }
+
+    .skills {
+        scale: .8;
+    }
+
+    .kotak {
+        margin-top: 0px;
+    }
+
+    .contain :first-child {
+        margin-top: 0px;
+
+    }
+
+    
+
+    .kotak h3 {
+       padding-top: 30px;
+        font-size: 220%;
+    }
+
+    .contact{
+    min-height: 80vh;
+    padding: 40px 7%;
+    width: 100%;
+    background: linear-gradient(to top,#ffbb00,#000 70%);
+
+    display: flex;
+    flex-direction: column;
+}
+
+    .contact .quote {
+        margin-left: 0px;
+        scale: .9;
+    }
+
+    .contact .quote{
+    margin-top: 0;
+    padding-top: 0;
+   }
+
+    .rapi{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-right: 90px;
+    }
+
+    .rapi ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+
+    .rapi li{
+        font-size: 1rem;
+        margin-bottom: 4px;
+        font-size: 90%;
+        margin-right: 20px;
+    }
+
+   .copyright{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70%;
+    }
+    
+    #skills {
+    scroll-margin-top: -70px;
+    }
+}
