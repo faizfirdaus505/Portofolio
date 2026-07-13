@@ -676,9 +676,9 @@ nav ul li  :hover {
     linear-gradient(
         to top,
         #ffbb00,
-        #000 70%
+        transparent 70%
     );
-    z-index: -40;
+    z-index: 40;
 }
 
 .quote{
@@ -698,7 +698,7 @@ nav ul li  :hover {
     align-self:flex-end;
     display:flex;
     gap:90px;
-    z-index: 2;
+    z-index: 200;
 
 }
 
