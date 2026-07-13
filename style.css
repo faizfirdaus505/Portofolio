@@ -689,6 +689,7 @@ nav ul li  :hover {
 }
 
 .rapi{
+    position: relative;
     align-self:flex-end;
     display:flex;
     gap:90px;
