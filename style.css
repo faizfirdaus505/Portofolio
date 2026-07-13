@@ -692,7 +692,7 @@ nav ul li  :hover {
     align-self:flex-end;
     display:flex;
     gap:90px;
-    z-index: 2;
+    z-index: 2000;
     padding-right: 200px;
 }
 
