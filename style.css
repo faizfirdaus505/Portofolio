@@ -992,7 +992,7 @@ nav ul li  :hover {
     }
 
    .copyright{
-    font-size: 70%;
+    scale: .7;
     }
     
     #skills {
