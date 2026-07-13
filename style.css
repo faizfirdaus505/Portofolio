@@ -669,7 +669,7 @@ nav ul li  :hover {
     linear-gradient(
         to top,
         #ffbb00,
-        #000 70%
+        transparent
     );
     z-index: 400;
 }
