@@ -728,6 +728,8 @@ nav ul li  :hover {
     color:#ffffff;
     z-index: 2;
     justify-content: center;
+    display: flex;
+    margin: auto;
 }
 
 .rapi ul li a {
