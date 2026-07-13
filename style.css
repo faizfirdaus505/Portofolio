@@ -727,7 +727,7 @@ nav ul li  :hover {
     font-size:.9rem;
     color:#ffffff;
     z-index: 2;
-
+    justify-content: center;
 }
 
 .rapi ul li a {
