@@ -8,12 +8,17 @@ body{
     overflow-x: hidden;
 }
 
-
+.wrapper{
+    overflow:hidden;
+}
 html{
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
 }
 
+.projects{
+    overflow:hidden;
+}
 
 
 .light-leak{
@@ -727,6 +732,11 @@ nav ul li  :hover {
     color: #fff;
 }
 
+.contact{
+    width:100%;
+    padding:40px 7%;
+}
+
 /* hamburger animasi */
 
 .menu-tonggle span:nth-child(2) {
@@ -993,4 +1003,8 @@ nav ul li  :hover {
     #skills {
     scroll-margin-top: -70px;
     }
+
+    .wrapper{
+    overflow:hidden;
+}
 }
