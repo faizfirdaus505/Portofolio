@@ -818,7 +818,11 @@ nav ul li  :hover {
         font-size: 90%;
         margin-right: 20px;
     }
-
+        
+    .rapi {
+         padding-right: 0px;
+    }
+    
     .copyright {
         font-size: 70%;
         text-align: center;
