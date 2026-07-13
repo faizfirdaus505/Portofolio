@@ -316,7 +316,7 @@ nav ul li  :hover {
 
 /* Foto */
 
-.about .muka img{
+/* .about .muka img{
     width: calc(100% - 10px);
     height: calc(100% - 10px);
 
@@ -336,7 +336,7 @@ nav ul li  :hover {
 
 /* Border */
 
-.about .muka::before{
+/* .about .muka::before{
 
     content:"";
 
@@ -364,11 +364,11 @@ nav ul li  :hover {
     animation: rotate 3s linear infinite;
 
     z-index:0;
-}
+} */
 
 /* Glow */
 
-.about .muka::after{
+/* .about .muka::after{
 
     content:"";
 
@@ -400,13 +400,13 @@ nav ul li  :hover {
     opacity:.8;
 
     z-index:-1;
-}
+} */
 
 /* ===========================================
    MEMBUAT TENGAHNYA TERTUTUP
 =========================================== */
 
-.about .muka::before{
+/* .about .muka::before{
 
     padding:3px;
 
@@ -429,7 +429,7 @@ nav ul li  :hover {
    ROTATE
 =========================================== */
 
-@keyframes rotate{
+/* @keyframes rotate{
 
     from{
         --deg:0deg;
@@ -439,7 +439,7 @@ nav ul li  :hover {
         --deg:360deg;
     }
 
-}
+} */
 
 .about .line {
     grid-area: garis;
