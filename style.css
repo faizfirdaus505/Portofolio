@@ -15,7 +15,7 @@ html{
 
 
 
-.light-leak{
+/* .light-leak{
     position: fixed;
     top: 0;
     left: 0;
@@ -38,7 +38,7 @@ html{
     opacity: .1;
     mix-blend-mode: soft-light;
 }
-
+ */
 
 @font-face {
     font-family: 'coolveticaregular';
@@ -725,6 +725,11 @@ nav ul li  :hover {
 .rapi ul li a {
     text-decoration: none;
     color: #fff;
+}
+
+.contact::before,
+.contact::after{
+    pointer-events:none;
 }
 
 /* hamburger animasi */
