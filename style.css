@@ -699,7 +699,7 @@ nav ul li  :hover {
     display:flex;
     gap:90px;
     z-index: 200;
-
+    padding-right: 200px;
 }
 
 .rapi ul :first-child {
