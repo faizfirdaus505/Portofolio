@@ -679,6 +679,9 @@ nav ul li  :hover {
         transparent 70%
     );
     z-index: 40;
+    min-height: 100vh;
+    padding: 80px 70px 50px;
+    box-sizing: border-box;
 }
 
 .quote{
@@ -699,7 +702,6 @@ nav ul li  :hover {
     display:flex;
     gap:90px;
     z-index: 200;
-    padding-right: 200px;
 }
 
 .rapi ul :first-child {
