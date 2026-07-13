@@ -8,9 +8,6 @@ body{
     overflow-x: hidden;
 }
 
-.wrapper{
-    overflow:hidden;
-}
 html{
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
