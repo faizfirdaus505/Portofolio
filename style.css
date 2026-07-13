@@ -672,7 +672,7 @@ nav ul li  :hover {
         #ffbb00,
         #000 70%
     );
-    z-index: -40;
+    z-index: 400;
 }
 
 .quote{
