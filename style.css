@@ -16,9 +16,6 @@ html{
     scroll-snap-type: y proximity;
 }
 
-.projects{
-    overflow:hidden;
-}
 
 
 .light-leak{
