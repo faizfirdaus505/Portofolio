@@ -676,12 +676,9 @@ nav ul li  :hover {
     linear-gradient(
         to top,
         #ffbb00,
-        transparent 70%
+        #000 70%
     );
-    z-index: 40;
-    min-height: 100vh;
-    padding: 80px 70px 50px;
-    box-sizing: border-box;
+    z-index: -40;
 }
 
 .quote{
@@ -701,14 +698,14 @@ nav ul li  :hover {
     align-self:flex-end;
     display:flex;
     gap:90px;
-    z-index: 200;
+    z-index: 2;
+    padding-right: 200px;
 }
 
 .rapi ul :first-child {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 120%;
     letter-spacing: 1px;
-    margin-left: -200px;
 }
 
 .rapi ul{
@@ -735,11 +732,6 @@ nav ul li  :hover {
 .rapi ul li a {
     text-decoration: none;
     color: #fff;
-}
-
-.contact{
-    width:100%;
-    padding:40px 7%;
 }
 
 /* hamburger animasi */
